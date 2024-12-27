@@ -1,0 +1,20 @@
+{% extends 'book_list.html' %}
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="container-sm">
+
+        <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ book.full_name}}</h5>
+    <button style="margin-bottom: 10px;" class="btn btn-danger" type="submit">Удалить </button>
+    <div class="container-sm"><a class="btn btn-outline-primary" href="{% url 'book-list' %}">Назад</a></div>
+
+  </div>
+</div>
+    </div>
+
+</form>
+
+{% endblock %}
