@@ -23,8 +23,9 @@
 <ul class="list_group">
     {% for book in books %}
 
-
     <ul class="nav nav-tabs">
+    <h1>Все книги</h1>
+
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="{% url 'book-update' book.pk %}">{{ book.full_name}}</a>
   </li>
